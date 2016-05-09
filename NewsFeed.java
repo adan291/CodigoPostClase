@@ -16,22 +16,31 @@ public class NewsFeed
      */
     public NewsFeed()
     {
-        messages = new ArrayList<>();
-        photos = new ArrayList<>();
+       messages = new ArrayList<>();
+       photos = new ArrayList<>();
     }
 
+    
     public void addMessagePost(MessagePost message)
     {
-
+        messages.add(message);
     }
-
+    
     public void addPhotoPost(PhotoPost photo)
     {
-
+        photos.add(photo);
     }
-
+    
     public void show()
     {
-
+        for (PhotoPost photo: photos)
+        {
+            photo.display();
+        }
+        
+        for (MessagePost message: messages)
+        {
+            message.display();
+        }
     }
 }
