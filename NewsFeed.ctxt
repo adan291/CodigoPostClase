@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=NewsFeed()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ NewsFeed\r\n
+comment1.params=message
+comment1.target=void\ addMessagePost(MessagePost)
+comment2.params=photo
+comment2.target=void\ addPhotoPost(PhotoPost)
+comment3.params=
+comment3.target=void\ show()
+numComments=4
