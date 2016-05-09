@@ -85,12 +85,26 @@ public class PhotoPost
             }
         }
     }
-    
-    public String timeString(long time)
-    {
-        long elapsedTime = (time - timeStamp);
-        float minutes = (float)(elapsedTime / 60000);
-        float seconds = (minutes - (int) minutes) * 60;
-        return "Han transcurrido " + (int)minutes + " minutos " + (int)seconds + " segundos.";
+   
+    private String timeString(long time){
+        long diferencia = time - timeStamp;
+        int segundos = (int)diferencia/1000;
+        int minutos = segundos/60;
+        int horas = minutos/60;
+        minutos -= horas*60;
+        segundos -= minutos*60;
+
+        String tiempo = " ";
+        if(horas != 0)
+        {
+            tiempo += horas + " horas ";
+        }
+        if(minutos != 0)
+        {
+            tiempo += minutos + " minutos ";
+        }
+        tiempo += segundos + " segundos ";
+        return tiempo;        
     }
+    
 }
