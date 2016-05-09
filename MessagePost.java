@@ -23,12 +23,19 @@ public class MessagePost
         likes = 0;
         comments = new ArrayList<>();
     }
-
+    
+    /**
+     * Metodo para dar me gusta
+     */
     public void like()
     {
         likes++;
     }
-
+    
+    /**
+     * Metodo para dar no me gusta
+     * Si los me gusta son negativos se pondria a 0 sino se resta
+     */
     public void unLike()
     {
         if (likes-- < 0)
@@ -41,21 +48,33 @@ public class MessagePost
         }
     }
 
+    /**
+     * Metodo para poner un comentario
+     */
     public void addComment(String text)
     {
         comments.add(text);
     }
-
+    
+    /**
+     * Metodo para mostrar el mensaje
+     */
     public String getText()
     {
         return message;
     }
-
+    
+    /**
+     * Metodo que devuelve el tiempo desde 1 de enero de 1970
+     */
     public long getTimeStamp()
     {
         return timeStamp;
     }
 
+     /**
+     * Metodo que muestra todo desde que el mensaje se envio
+     */
     public void display()
     {
         System.out.println("Usuario: " + userName);
@@ -76,6 +95,9 @@ public class MessagePost
         }
     }
     
+     /**
+     * Metodo que muestra el tiempo de envio
+     */
     private String timeString(long time){
         long diferencia = time - timeStamp;
         int segundos = (int)diferencia/1000;

@@ -27,11 +27,18 @@ public class PhotoPost
        comments = new ArrayList<>();
     }
     
+    /**
+     * Metodo para dar me gusta
+     */
     public void like()
     {
          likes++;
     }
     
+     /**
+     * Metodo para dar no me gusta
+     * Si los me gusta son negativos se pondria a 0 sino se resta
+     */
     public void unLike()
     {
          if (likes-- < 0)
@@ -44,27 +51,40 @@ public class PhotoPost
         }
     }
     
+   /**
+     * Metodo para poner un comentario
+     */
     public void addComment(String text)
     {
         comments.add(text);
     }
     
+   
     public String getImageFile()
     {
         String imageFile = "";
         return imageFile;
     }
     
+    /**
+     * Metodo para poner un titulo
+     */
     public String getCaption()
     {
         return caption;
     }
     
+    /**
+     * Metodo que devuelve el tiempo desde 1 de enero de 1970
+     */
     public long getTimeStamp()
     {
         return timeStamp;
     }
     
+     /**
+     * Metodo que muestra todo desde que el mensaje se envio
+     */
     public void display()
     {
         System.out.println("Usuario: " + userName);
@@ -86,6 +106,9 @@ public class PhotoPost
         }
     }
    
+     /**
+     * Metodo que muestra todo desde que el mensaje se envio
+     */
     private String timeString(long time){
         long diferencia = time - timeStamp;
         int segundos = (int)diferencia/1000;

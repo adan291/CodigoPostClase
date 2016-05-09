@@ -19,18 +19,26 @@ public class NewsFeed
        messages = new ArrayList<>();
        photos = new ArrayList<>();
     }
-
     
+     /**
+     * Metodo para añadir el mensaje 
+     */
     public void addMessagePost(MessagePost message)
     {
         messages.add(message);
     }
     
+     /**
+     * Metodo para añadir el mensaje antiguo
+     */
     public void addPhotoPost(PhotoPost photo)
     {
         photos.add(photo);
     }
     
+     /**
+     * Metodo que muestra todo 
+     */
     public void show()
     {
         for (PhotoPost photo: photos)
